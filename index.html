@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NL Calçados</title>
+    <style>
+        /* Estilos para centralizar e animar a imagem */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #f4a3c3);
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Desabilitar seleção de texto e zoom */
+        body, * {
+            user-select: none; 
+            -webkit-user-select: none; 
+            -ms-user-select: none; 
+            -moz-user-select: none; 
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+            touch-action: none;
+        }
+
+        .ford-logo {
+            width: 350px; /* Ajuste o tamanho conforme necessário */
+            opacity: 0;
+            transform: scale(0.5);
+            animation: showFord 2s forwards;
+            border-radius: 20px; /* Deixa a imagem com bordas arredondadas */
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5); /* Adiciona uma sombra feminina */
+        }
+
+        /* Animação de entrada */
+        @keyframes showFord {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="nl.png" alt="NL Calçados" class="ford-logo">
+
+    <script>
+        // Redireciona para outra página após 3 segundos
+        setTimeout(function() {
+            window.location.href = "index1.html";
+        }, 3000);
+    </script>
+
+</body>
+</html>

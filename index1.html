@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Nayara Calçados 👡</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        h2 {
+            color: #5c2a9d;
+        }
+
+        label {
+            color: #5c2a9d;
+        }
+
+        input, select {
+            border: 2px solid #d4a5e3;
+        }
+
+        button {
+            background-color: #d4a5e3;
+        }
+
+        button:hover {
+            background-color: #b784d7;
+        }
+    </style>
+</head>
+
+<body class="bg-white-900 flex items-center justify-center min-h-screen">
+    <form action="#" method="post" class="w-full max-w-md rounded-lg shadow-lg p-6 space-y-4 bg-white/80">
+        <h2 class="text-2xl font-bold text-center p-2 rounded-md"><b>Nayara Lima Calçados 👡</b></h2>
+
+        <div>
+            <label for="name" class="block font-semibold">Nome completo do Cliente:</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required 
+                class="w-full px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-pink-500">
+        </div>
+
+        <div>
+            <label for="model" class="block font-semibold">Modelo:</label>
+            <input type="text" id="model" name="model" placeholder="Ex: Papete" required 
+                class="w-full px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-pink-500">
+        </div>
+
+        <div>
+            <label for="color" class="block font-semibold">Cor:</label>
+            <input type="text" id="color" name="color" placeholder="Ex: Preto" required 
+                class="w-full px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-pink-500">
+        </div>
+
+        <div>
+            <label for="size" class="block font-semibold">Tamanho:</label>
+            <input type="number" id="size" name="size" placeholder="Ex: 40" required 
+                class="w-full px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-pink-500">
+        </div>
+
+        <div>
+            <label for="payment" class="block font-semibold">Forma de Pagamento:</label>
+            <select id="payment" name="payment" required 
+                class="w-full px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-pink-500">
+                <option value="" disabled selected>Selecione</option>
+                <option value="Pix">Pix</option>
+                <option value="Cartão">Cartão</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="city" class="block font-semibold">Cidade:</label>
+            <input type="text" id="city" name="city" placeholder="Digite a cidade" required 
+                class="w-full px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-pink-500">
+        </div>
+
+        <div>
+            <label for="neighborhood" class="block font-semibold">Bairro:</label>
+            <input type="text" id="neighborhood" name="neighborhood" placeholder="Digite o bairro" required 
+                class="w-full px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-pink-500">
+        </div>
+
+        <div>
+            <label for="street" class="block font-semibold">Rua:</label>
+            <input type="text" id="street" name="street" placeholder="Digite a rua" required 
+                class="w-full px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-pink-500">
+        </div>
+
+        <div>
+            <label for="house_number" class="block font-semibold">Número da casa:</label>
+            <input type="number" id="house_number" name="house_number" placeholder="Digite o número" required 
+                class="w-full px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-pink-500">
+        </div>
+
+        <div>
+            <label for="reference1" class="block font-semibold">Ponto de referência 1:</label>
+            <input type="text" id="reference1" name="reference1" placeholder="Ex: Próximo ao mercado" required 
+                class="w-full px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-pink-500">
+        </div>
+
+        <div>
+            <label for="phone1" class="block font-semibold">Telefone para contato 1:</label>
+            <input type="number" id="phone1" name="phone1" placeholder="Digite o telefone principal" required 
+                class="w-full px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-pink-500">
+        </div>
+
+<button type="button" onclick="sendWhatsAppMessage()" 
+    class="w-full bg-pink-200 text-black font-bold py-3 mt-4 rounded-md hover:bg-pink-600 focus:ring-3 focus:ring-pink-400">
+    Enviar pelo WhatsApp
+</button>
+    </form>
+
+    <script>
+        function sendWhatsAppMessage() {
+            const name = document.getElementById('name').value;
+            const model = document.getElementById('model').value;
+            const color = document.getElementById('color').value;
+            const size = document.getElementById('size').value;
+            const payment = document.getElementById('payment').value;
+            const city = document.getElementById('city').value;
+            const neighborhood = document.getElementById('neighborhood').value;
+            const street = document.getElementById('street').value;
+            const houseNumber = document.getElementById('house_number').value;
+            const reference1 = document.getElementById('reference1').value;
+            const phone1 = document.getElementById('phone1').value;
+
+            const message = `*Cadastro Nayara Calçados 🎁*\n*Nome*: ${name}\n*Modelo*: ${model}\n*Cor*: ${color}\n*Tamanho*: ${size}\n*Forma de pagamento*: ${payment}\n*Endereço*: ${street}, ${houseNumber}, ${neighborhood}, ${city}\n*Referência*: ${reference1}\n*Telefone 1*: ${phone1}`;
+            const whatsappLink = `https://wa.me/5548999290582?text=${encodeURIComponent(message)}`;
+            window.open(whatsappLink, '_blank');
+        }
+    </script>
+</body>
+
+</html>
